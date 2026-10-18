@@ -76,9 +76,10 @@ export default function Home() {
           <CardContent className="space-y-4">
             <div className="space-y-1">
               <Label className="text-gray-300">Product / Service</Label>
-              <Input placeholder="e.g. Project management SaaS, $49/mo" value={productDescription} onChange={e => setProductDescription(e.target.value)} className="bg-gray-800 border-gray-700 text-white" />
+              <Input maxLength={500} placeholder="e.g. Project management SaaS, $49/mo" value={productDescription} onChange={e => setProductDescription(e.target.value)} className="bg-gray-800 border-gray-700 text-white" />
             </div>
             <Textarea
+              maxLength={12000}
               placeholder="Paste call transcript here..."
               className="min-h-64 bg-gray-800 border-gray-700 text-white font-mono text-sm"
               value={transcript}
